@@ -5,11 +5,145 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400|Megrim" rel="stylesheet">
-	<title>UWA</title>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,800,900|Megrim" rel="stylesheet">
+	<title>Created for creators</title>
 </head>
 
 <body>
-	bye
+	<nav>
+		<a class="access-cntent" href="">
+
+			New uplaods
+
+		</a>
+
+		<a class="access-cntent" href="">
+
+			Story board
+		</a>
+
+		<div class="ui-wrap">
+
+			<div class="userform" id="mdlBtn">
+				Sign up
+			</div>
+			<!--end of userform/-->
+
+			<div class="uinav" onclick="openNav()">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+
+		</div>
+	</nav><!--end of nav wrap/-->
+
+	<div id="clientlogin" class="loginmod">
+
+		<div class="modalwrap">
+
+			<span class="closemodal">
+
+				<div class="bar"></div>
+       			<div class="bar two"></div>
+
+			</span>
+
+			<div class="modalcontent">
+
+				<div class="formintro">
+					<h1>CALLING ALL ARTISTS!</h1>
+
+        			<p>Create, share, connect and communicate with other artist. Get inspired while inspiring, teaching and learning from each other.</p>
+
+				</div>
+
+				<div class="formintro" id="formwrap">
+
+					<form>
+
+        				<h1>United We Art</h1>
+
+        				The U.W.A expierence starts here.
+
+        				<input class="user" type="text" placeholder="Email"></input>
+
+        				<br>
+
+        				<input class="user" type="password" placeholder="Password"/>
+
+        				<br>
+
+        				<div class="log-on">
+
+        					<a class="sign-in" href="">SIGN IN</a> OR <a href="">JOIN NOW!</a>
+        				</div>		
+
+        				<input type="checkbox"/>
+
+        				Keep me signed in
+ 
+        		  		<br />
+
+        				<div class="forgot-password">
+
+        				<a href="">forgot password? <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+
+        				</div>	
+
+        			</form>
+
+        		</div><!--end of formwrap-->  
+					
+			</div><!--end of madalcontent/-->
+
+		</div><!--end of modalwrap/-->
+
+	</div><!-- end of clientlogin/-->
+
+	<!--begining of nav/-->
+	<div id="myNav" class="navOverlay">
+
+		<div class="navContent">
+
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+				<div class="bar"></div>
+				<div class="bar two"></div>
+			</a>
+
+		</div>	
+
+	</div><!--end of nav/-->
+
+	<!--start of modal/-->
+ 	<script>
+  		var modal = document.getElementById('clientlogin');
+  		var btn = document.getElementById("mdlBtn");
+  		var span = document.getElementsByClassName("closemodal")[0];
+  		btn.onclick = function() {
+    	modal.style.display = "block"
+  		}
+  		span.onclick = function() {
+    		modal.style.display = "none";
+  		}
+  		window.onclick = function(event) {
+    		if (event.target == modal) {
+     	 	modal.style.display = "none";
+    		}
+  		}
+  	</script>
+	<!--end of login modal/-->
+
+	<!--script for opeing and closing nav/-->
+	<script>
+		function openNav() {
+    	document.getElementById("myNav").style.width = "100%";
+		}
+		function closeNav() {
+    	document.getElementById("myNav").style.width = "0%";
+		}
+	</script>
+	<!--end of script for opeing and closing nav/-->
+
 </body>
 </html>

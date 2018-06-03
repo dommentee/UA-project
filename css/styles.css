@@ -9,10 +9,191 @@ html {
 body {
   height: 100%;
   font-family: 'Work Sans', sans-serif;
+  background: -webkit-linear-gradient(top, #E5E5E5);
+  background: -moz-linear-gradient(top, #E5E5E5);
   color: #3D3D3D;
-  font-weight: 300; }
+  font-weight: 300;
+  padding: 0 5%; }
 
 .clear-fix {
   clear: both; }
+
+nav {
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-size: .85em; }
+  nav .access-cntent {
+    color: #3D3D3D;
+    text-decoration: none;
+    width: 12%;
+    text-align: center;
+    padding: 7px 0;
+    border: 2px solid #202D85; }
+    nav .access-cntent:hover {
+      color: #202D85; }
+  nav a:nth-child(2) {
+    margin-left: 10px; }
+  nav .ui-wrap {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em; }
+    nav .ui-wrap .userform {
+      color: #202D85;
+      padding: 6px 35px;
+      border: 2px solid #202D85;
+      background: -webkit-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
+      background: -moz-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
+      cursor: pointer; }
+      nav .ui-wrap .userform:hover {
+        color: #fff;
+        background: -webkit-linear-gradient(top, #202D85, #2A3CB0);
+        background: -moz-linear-gradient(top, #202D85, #2E96BF); }
+    nav .ui-wrap .uinav {
+      cursor: pointer;
+      margin-left: 15px; }
+      nav .ui-wrap .uinav .bar {
+        width: 40px;
+        height: 5px;
+        margin: 6px 0;
+        background-color: #202D85; }
+
+/*end of nav*/
+.loginmod {
+  /*beggining of clientlogin*/
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7); }
+  .loginmod .closemodal {
+    float: right;
+    cursor: pointer; }
+    .loginmod .closemodal .bar {
+      width: 35px;
+      height: 5px;
+      margin: 6px 0;
+      background-color: #000;
+      transform: rotate(-45deg) translate(-9px, 6px); }
+    .loginmod .closemodal .two {
+      transform: rotate(45deg); }
+
+.modalwrap {
+  width: 65%;
+  margin: 12% auto;
+  background: -webkit-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
+  background: -moz-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9); }
+  .modalwrap .modalcontent {
+    width: 87%;
+    padding: 5% 0 5% 6%;
+    display: flex;
+    margin: 0 auto; }
+  .modalwrap .formintro {
+    width: 54%;
+    float: left;
+    background: -webkit-linear-gradient(top, #EDEDED, #F7F7F7, #FAFAFA);
+    background: -moz-linear-gradient(top, #EDEDED, #F7F7F7, #FAFAFA);
+    padding: 10px 15px; }
+    .modalwrap .formintro h1 {
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      font-weight: 800;
+      color: #2176C1; }
+    .modalwrap .formintro p {
+      font-size: 1.3em; }
+  .modalwrap #formwrap {
+    width: 45%;
+    background: -webkit-linear-gradient(top, #1B39B3, #1B4BB3, #2176C1);
+    background: -moz-linear-gradient(top, #1B39B3, #1B4BB3, #2176C1); }
+    .modalwrap #formwrap h1 {
+      color: #EDEDED; }
+    .modalwrap #formwrap form {
+      padding: 1%;
+      margin: 0 auto;
+      color: #EDEDED; }
+    .modalwrap #formwrap .user {
+      width: 100%;
+      padding: 11px 0;
+      margin: 9px 0;
+      font-size: .8em;
+      border: 0;
+      box-sizing: border-box; }
+    .modalwrap #formwrap .log-on {
+      margin: 12px 0;
+      font-size: .75em;
+      font-family: "Arial Black", Arial, sans-serif;
+      font-weight: bold; }
+    .modalwrap #formwrap .sign-in {
+      padding: 7px;
+      border-radius: 3px;
+      background: -webkit-linear-gradient(top, #34AAD9, #2E96BF, #2176C1);
+      background: -moz-linear-gradient(top, #34AAD9, #2E96BF, #2176C1);
+      background-color: #2E96BF; }
+      .modalwrap #formwrap .sign-in:hover {
+        background: -webkit-linear-gradient(top, #202D85, #2A3CB0);
+        background: -moz-linear-gradient(top, #202D85, #2E96BF);
+        text-decoration: none; }
+    .modalwrap #formwrap a {
+      text-decoration: none;
+      color: #EDEDED; }
+      .modalwrap #formwrap a:hover {
+        text-decoration: underline; }
+
+/*end of clientlogin*/
+/*beggining of #myNav*/
+.navOverlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: -webkit-linear-gradient(top, #2161C1, #2148AF, #2123AF);
+  background: -moz-linear-gradient(top, #2161C1, #2148AF, #2123AF);
+  background-color: #2123AF;
+  overflow-x: hidden;
+  transition: 0.6s; }
+  .navOverlay .closebtn {
+    float: right;
+    margin-top: 2%; }
+    .navOverlay .closebtn .bar {
+      width: 40px;
+      height: 5px;
+      margin: 6px 0;
+      background-color: #202D85;
+      transform: rotate(-45deg) translate(-9px, 6px); }
+    .navOverlay .closebtn .two {
+      transform: rotate(45deg); }
+
+.navContent {
+  padding: 0 5%; }
+
+/*end of #myNav*/
+@media screen and (max-width: 868px) {
+  nav .access-cntent {
+    width: 15%; } }
+@media screen and (max-width: 568px) {
+  nav {
+    font-size: .6em;
+    font-weight: 400; }
+    nav .access-cntent {
+      width: 18%;
+      padding: 5px 0;
+      border: 0; }
+    nav a:nth-child(2) {
+      margin-left: 8px; }
+    nav .ui-wrap .userform {
+      padding: 5px 20px; }
+    nav .ui-wrap .uinav .bar {
+      width: 30px;
+      height: 4px;
+      margin: 4px 0; } }
 
 /*# sourceMappingURL=styles.css.map */
