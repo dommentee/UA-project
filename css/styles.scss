@@ -11,8 +11,8 @@ html {
 body {
 	height: 100%;
 	font-family: 'Work Sans', sans-serif;
-	background: -webkit-linear-gradient(top, #E5E5E5);
-  	background: -moz-linear-gradient(top, #E5E5E5);
+	background: -webkit-linear-gradient(top, #EDEDED, #F7F7F7, #FAFAFA);
+  	background: -moz-linear-gradient(top, #EDEDED, #F7F7F7, #FAFAFA);
 	color: #3D3D3D;
 	font-weight: 300;
 	padding: 0 5%;
@@ -58,6 +58,7 @@ nav {
 			background: -webkit-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
   			background: -moz-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
 			cursor: pointer;
+			font-weight: 400;
 
 			&:hover {
   				color: #fff;
@@ -82,7 +83,7 @@ nav {
 }/*end of nav*/
 
 .loginmod {/*beggining of clientlogin*/
-	//display: none;
+	display: none;
 	position: fixed;
 	top: 0;
 	z-index: 1;
@@ -92,7 +93,7 @@ nav {
 	height: 100%;
 	overflow: auto;
 	background-color: #000;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.3);
 
 	.closemodal {
 		float: right;
@@ -102,7 +103,7 @@ nav {
     		width: 35px;
 			height: 5px;
 			margin: 6px 0;
-			background-color: #000;	
+			background-color: #202D85;	
 			transform: rotate(-45deg) translate(-9px, 6px);
     	}
 
@@ -113,14 +114,14 @@ nav {
 }
 
 .modalwrap {
-	width: 65%;
-	margin: 12% auto;
-	background: -webkit-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
-  	background: -moz-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
+	width: 70%;
+	margin: 8% auto;
+	background: -webkit-linear-gradient(top, #EDEDED, #F7F7F7, #FAFAFA);
+  	background: -moz-linear-gradient(top, #EDEDED, #F7F7F7, #FAFAFA);
 
   	.modalcontent {
   		width: 87%;
-		padding: 5% 0 5% 6%;
+		padding: 5% 0 5% 5%;
 		display: flex;
 		margin: 0 auto;
   	}
@@ -128,77 +129,99 @@ nav {
   	.formintro {
   		width: 54%;
   		float: left;
-  		background: -webkit-linear-gradient(top, #EDEDED, #F7F7F7, #FAFAFA);
-  		background: -moz-linear-gradient(top, #EDEDED, #F7F7F7, #FAFAFA);
   		padding: 10px 15px;
 
   		h1 {
   			font-size: 2.4em;
-  			margin-bottom: 20px;
+  			margin-bottom: 25px;
   			font-weight: 800;
-  			color: #2176C1;
+  			color:  #55F5E9;
+  			text-decoration: underline;
   		}
 
   		p {
   			font-size: 1.3em;
+  			padding: 0 30px 0 0;
+  			margin-top: 20px;  		
   		}
   	}
 
   	#formwrap {
   		width: 45%;
-  		background: -webkit-linear-gradient(top, #1B39B3, #1B4BB3, #2176C1);
-  		background: -moz-linear-gradient(top, #1B39B3, #1B4BB3, #2176C1);
+  		border: 2px solid #202D85;
 
   		h1 {
-  			color: #EDEDED;
+  			color: #202D85;
+  			text-decoration: none;
   		}
 
   		form {
   			padding: 1%;
 			margin: 0 auto;
-			color: #EDEDED;
+		
+  		}
+
+  		.ua-experience {
+  			font-size: 1.5em;
+  			font-weight: 400;
   		}
 
   		.user {
 			width: 100%;
-			padding: 11px 0;
-			margin: 9px 0;
+			padding: 13px 8px;
+			margin: 15px 0 9px 0;
 			font-size: .8em;
-			border: 0;
+			border: .5px solid #3D3D3D;
 			box-sizing: border-box;
 		}
 
 		.log-on {
 			margin: 12px 0;
 			font-size: .75em;
-			font-family: "Arial Black", Arial, sans-serif;
-			font-weight: bold;
+			font-weight: 800;
 		}
 
 		.sign-in {
-			padding: 7px;
-			border-radius: 3px;
-			background: -webkit-linear-gradient(top, #34AAD9, #2E96BF, #2176C1);
-  			background: -moz-linear-gradient(top, #34AAD9, #2E96BF, #2176C1);
-			background-color: #2E96BF;
+			color: #202D85;
+			padding: 6px 35px;
+			border: 2px solid #202D85;
+			cursor: pointer;
+			background: -webkit-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
+  			background: -moz-linear-gradient(top, #5EEF9B, #55F5AF, #55F5E9);
 
 			&:hover {
 				background: -webkit-linear-gradient(top, #202D85, #2A3CB0);
   				background: -moz-linear-gradient(top, #202D85, #2E96BF);
 				text-decoration: none;
+				color: #fff;
 			}
 		}
 
 		a {
 			text-decoration: none;
-			color: #EDEDED;
-
+			color: #202D85;
+			
 			&:hover {
 				text-decoration: underline;
 			}
 		}
 
-  	}
+		#checkbox {
+			display: flex;
+			align-items: center;
+			font-size: .8em;	
+
+			span {
+				margin-left: 5px;
+			}
+		}
+
+		.forgot-password {
+			font-size: .8em;
+			margin: 12px 0;
+		}
+
+  	}/*end of formwrap*/
 
 }
 /*end of clientlogin*/
@@ -211,15 +234,14 @@ nav {
     z-index: 1;
     top: 0;
     left: 0;
-    background: -webkit-linear-gradient(top, #2161C1, #2148AF, #2123AF);
-  	background: -moz-linear-gradient(top, #2161C1, #2148AF, #2123AF);
-  	background-color: #2123AF; 
     overflow-x: hidden;
     transition: 0.6s;
-
+    background-color: #55F5E9;
+ 
 	.closebtn {
 		float: right;
 		margin-top: 2%;
+		padding: 0 5%;
 
 		.bar {
 			width: 40px;
@@ -227,22 +249,109 @@ nav {
 			margin: 6px 0;
 			background-color: #202D85;
 			transform: rotate(-45deg) translate(-9px, 6px);
-
 		}
+
 		.two {
 			transform: rotate(45deg);
 		}
 	}	
-
 }
 
 .navContent {
 	padding: 0 5%;
+	display: inline;
+
+	.navselections {
+		display: flex;
+		align-items: center;
+		margin: 10% 0;			
+	}
+
+	.catego-wrap {
+		position: relative;
+   	 	width: 33.3%;
+    	float: left;
+    	text-align: center;
+	}
+
+	h2 {
+    	color: #202D85;
+    }
+
+
+    a {	
+    	padding: 6px 0;
+    	margin-top: 5px;
+    	text-decoration: none;
+    	font-size: 1.3em;
+    	color: #818181;
+    	display: block;
+   		transition: 0.3s;
+
+   		&:hover {
+			color: #f1f1f1;
+		}
+
+		&:focus {
+			color: #f1f1f1;
+		}
+	}
+	
+
 }
 /*end of #myNav*/
 
 @media screen and (max-width: 1024px) {
+	nav {
 
+	}
+
+	.loginmod {
+
+	} 
+
+	.modalwrap {
+		margin: 15% auto;
+
+		.formintro {
+  			width: 54%;
+  			padding: 10px 15px;
+
+  			h1 {
+  				font-size: 2em;
+  				margin-bottom: 8px;
+  			}
+
+  			p {
+  				font-size: 1.3em;
+  				padding: 0 30px 0 0;  		
+  			}
+  		}
+
+  		#formwrap {
+
+  			.user {
+				width: 100%;
+				padding: 12px 8px;
+				margin: 13px 0 9px 0;
+				font-size: .8em;
+				border: .5px solid #3D3D3D;
+				box-sizing: border-box;
+			}
+
+  		}
+
+	}/*end of modalwrap*/
+
+	.navOverlay {
+
+	}
+
+	.navContent {
+		.navContent {
+			margin: 15% 0;
+		}
+	}
 }
 
 @media screen and (max-width: 868px) {
@@ -259,6 +368,95 @@ nav {
 
 @media only screen and (max-width: 823px) {
 
+	nav {
+
+	}
+
+	.modalwrap {
+		margin: 15% auto;
+
+		.modalcontent {
+			padding: 4% 0;
+		}
+
+		.formintro {
+  			padding: 10px 15px;
+
+  			h1 {
+  				font-size: 1.5em;
+  				margin-bottom: 8px;
+  				text-decoration: none;
+  			}
+
+  			p {
+  				font-size: 1.1em;
+  				padding: 0 30px 0 0;  		
+  			}
+  		}
+
+  		#formwrap {
+
+  			form {
+  				padding: 0;
+  			}
+
+  			.ua-experience {
+  				font-size: 1.2em;
+  			}
+
+  			.user {
+				padding: 8px 8px;
+				margin: 5px 0 9px 0;
+				font-size: .6em;
+				
+			}
+
+			.log-on {
+				margin: 9px 0;
+				font-size: .6em;
+				font-weight: 800;
+			}
+
+			.sign-in {
+				color: #202D85;
+				padding: 4px 20px;
+				border: 2px solid #202D85;
+
+			}
+
+			#checkbox {
+				font-size: .6em;	
+			}
+
+			.forgot-password {
+				font-size: .6em;
+				margin: 8px 0;
+			}
+
+  		}
+
+	}
+
+	.navOverlay {
+
+		.closebtn {
+			margin-top: 3%;
+		}	
+	}
+
+	.navContent {
+
+		h2 {
+    		font-size: 1.1em;
+   		}
+
+    	a {
+    		font-size: 1em;
+    		margin-top: 3px;
+		}
+
+	}
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -267,18 +465,68 @@ nav {
 
 
 @media screen and (max-width: 736px) {
+	nav {
+		font-size: .5em;
+
+		.access-cntent {
+			padding: 6px 0;
+			border: 2px solid #202D85;
+		}
+
+	}
+
+	.modalwrap {
+
+		.formintro {
+
+  			h1 {
+  				font-size: 1.3em;
+  				margin-bottom: 5px;
+  				text-decoration: none;
+  			}
+
+  			p {
+  				font-size: .9em;  		
+  			}
+  		}
+
+  		#formwrap {
+
+  			.ua-experience {
+  				font-size: .8em;
+  			}
+
+  			.user {
+				padding: 6px;
+				margin: 5px 0 9px 0;
+				font-size: .6em;	
+			}
+
+			.log-on {
+				font-size: .5em;
+				margin: 9px 0;
+				font-weight: 400;
+			}
+
+			.sign-in {
+				padding: 3px 12px;
+			}
+
+  		}
+
+	}
 
 }
 
 @media screen and (max-width: 568px) {
 
 	nav {
-		font-size: .6em;
+		font-size: .55em;
 		font-weight: 400;
 
 		.access-cntent {
 			width: 18%;
-			padding: 5px 0;
+			padding: 3px 0;
 			border: 0;
 		}
 
@@ -288,13 +536,13 @@ nav {
 
 		.ui-wrap {
 			.userform {
-				padding: 5px 20px;
+				padding: 3px 20px;
 				
 			}
 
 			.uinav {
 				.bar {
-					width: 30px;
+					width: 27px;
 					height: 4px;
 					margin: 4px 0;
 
@@ -303,6 +551,96 @@ nav {
 		}
 
 	}
+	.loginmod { 
+
+		.closemodal {
+			position: absolute;
+			right: 17%;
+			top: 14%;
+
+
+			.bar {
+    			width: 27px;
+				height: 4px;
+				margin: 6px 0;	
+    		}
+		}
+	}	
+
+	.modalwrap {
+		width: 65%;
+		margin: 25% auto;
+		background: transparent;
+
+		.modalcontent {
+  			width: 100%;
+			padding: 0;
+			display: inline-block;
+			margin: 0 auto;
+
+  		}
+
+  		.formintro {
+  			width: 100%;
+  			display: none;
+  			background: -webkit-linear-gradient(top, #EDEDED, #F7F7F7, #FAFAFA);
+  			background: -moz-linear-gradient(top, #EDEDED, #F7F7F7, #FAFAFA);
+
+  		}
+
+  		#formwrap {
+  			width: 100%;
+  			margin: 0;
+  			display: block;
+  		}
+	}
+
+	.navOverlay {
+		.closebtn {
+			margin-top: 5%;
+			padding: 0;
+
+			.bar {
+				width: 27px;
+				height: 4px;
+				margin: 6px 0;
+			}
+		}	
+	}
+
+	.navContent {
+		display: inline-block;
+		
+
+		.navselections {
+			width: 100%;
+			display: inline-block;
+		}
+
+		.catego-wrap {
+
+   	 		width: 100%;
+    		float: left;
+ 
+		}
+
+		h2 {
+			margin-top: 10px;
+    		font-size: 1.1em;
+    		padding: 5px;
+    		border-top: 2px solid #202D85; 
+   		}
+
+    	a {
+    		font-size: 1em;
+    		margin-top: 3px;
+		}
+
+	}
+
+
+
+
 
 
 }
