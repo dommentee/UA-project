@@ -13,13 +13,13 @@
 	<nav>
 		<a class="access-cntent" href="">
 
-			New uplaods
+			MY ARTIST
 
 		</a>
 
 		<a class="access-cntent" href="">
 
-			Story board
+			ARCHIVE
 		</a>
 
 		<div class="ui-wrap">
@@ -145,7 +145,102 @@
 
 	</div><!--end of nav/-->
 
-	<!--start of modal/-->
+	<div class="hero-mobile"><!--will be be landing page in mobile and replace slideer/-->
+
+		<div class="hero-intro">
+
+			<span>
+
+            	EXERCISE
+            	<br>
+           		YOUR
+            	<br> 
+            	CREATIVE
+            	<br> 
+           		SIDE!
+
+          	</span>
+
+          	<p>
+            	Express your self any and every way. Whether it's free hand, painting, sculpture or animation; show yourself through your preferred media and share your story. 
+          	</p>
+
+          	<a class="get-started" href="#">GET STARTED</a>
+
+		</div>
+
+	</div>
+
+	<!--begining of automatic slideshow/-->
+	<div class="slide-container">
+
+		<!--<div class="mySlides fade" id="slide-one">
+
+			<div class="hero-intro">
+				<span>
+
+            		EXERCISE
+            		<br>
+           			YOUR
+            		<br> 
+            		CREATIVE
+            		<br> 
+           			SIDE!
+
+          		</span>
+
+          		<p>
+            		Express your self any and every way. Whether it's free hand, painting, sculpture or animation; show yourself through your preferred media and share your story. 
+          		</p>
+
+          		<a class="get-started" href="#">GET STARTED</a>
+
+			</div>
+		
+			<!--<div class="logo">
+				logo
+			</div></--
+
+		</div><!--end of slide one/-->
+
+		<!--<div class="mySlides fade" id="slide-two">
+			<span>
+				CREATE, SHARE
+				<br>
+				AND LINK UP!
+			</span>
+
+			<p>
+            	Share your creation with friends or show the world what you can do and connect with people that have the same passoin.
+         	</p>
+
+         	<div class="upload-ui">
+
+          		<a class="get-started" href="#">Upload work</a>
+
+            	<a class="get-started" href="">View story board</a>
+
+          	</div>
+		</div>/-->
+
+		<div class="mySlides fade" id="slide-three">
+			three
+
+		</div>
+
+		<div class="selector">
+			<div class="dotwrap">
+  				<span class="dot" onclick="currentSlide(1)"></span> 
+  				<span class="dot" onclick="currentSlide(2)"></span> 
+  				<span class="dot" onclick="currentSlide(3)"></span>
+  			</div>	 
+
+  		</div>	
+		
+	</div>
+	<!--end of automatic slideshow/-->
+
+	<!--start of modal script/-->
  	<script>
   		var modal = document.getElementById('clientlogin');
   		var btn = document.getElementById("mdlBtn");
@@ -162,7 +257,7 @@
     		}
   		}
   	</script>
-	<!--end of login modal/-->
+	<!--end of login modal script/-->
 
 	<!--script for opeing and closing nav/-->
 	<script>
@@ -174,6 +269,51 @@
 		}
 	</script>
 	<!--end of script for opeing and closing nav/-->
+
+	<!--script for slideshow/-->
+		<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function currentSlide(n) {
+ 	showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+  		var i;
+  		var slides = document.getElementsByClassName("mySlides");
+  		var dots = document.getElementsByClassName("dot");
+  		if (n > slides.length) {slideIndex = 1}    
+  		if (n < 1) {slideIndex = slides.length}
+  		for (i = 0; i < slides.length; i++) {
+      		slides[i].style.display = "none";  
+  		}
+  		for (i = 0; i < dots.length; i++) {
+      		dots[i].className = dots[i].className.replace(" active", "");
+  		}
+  		slides[slideIndex-1].style.display = "block";  
+  		dots[slideIndex-1].className += " active";
+	}
+	autoSlide();
+	function autoSlide() {
+		var i;
+		var dots = document.getElementsByClassName("dot");
+		var slides = document.getElementsByClassName("mySlides");
+		  	for (i = 0; i < slides.length; i++) {
+     		slides[i].style.display = "none";  
+  		}
+  		for (i = 0; i < dots.length; i++) {
+  			dots[i].className = dots[i].className.replace(" active", "");
+  		}
+  		if (slideIndex > slides.length) {slideIndex = 1} 
+  			slides[slideIndex-1].style.display = "block"; 
+  			dots[slideIndex-1].className += " active"; 
+  			slideIndex++;
+			setTimeout(autoSlide, 12000);
+	}
+
+	</script>
+	<!--end of script for sldeshow/-->
 
 </body>
 </html>
